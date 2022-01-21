@@ -7,6 +7,12 @@
     <UserSecretsId>ba28399d-0138-4edd-9244-b71c109b0d63</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
+  
+  <!-- This property is causing the build output to become outside of the default Docker context -->
+  <!-- Which results in the launch not working and showing an obscure error. -->
+  <PropertyGroup>
+    <BaseOutputPath>$(MSBuildThisFileDirectory)../../artifacts/bin/$(MSBuildProjectName)/</BaseOutputPath>
+  </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
