@@ -1,5 +1,7 @@
 # Visual Studio Docker Issue
 
+Visual Studio Developer Community bug report can be found [here](https://developercommunity.visualstudio.com/t/Docker-launch-configuration-doesnt-work/1643628).
+
 ⚠ **'Docker launch configuration doesn't work when BaseOutputPath is outside of Docker context'**
 
 Setting the `BaseOutputPath` to a directory that is outside of the Docker build context (the directory the `.sln` is in) will result in Visual Studio being unable to launch the project using `Fast` (or default) `ContainerDevelopmentMode`.
